@@ -56,10 +56,17 @@
             <a href="#">Enlace 3</a>
         </nav>
     </header>
-
-    <!-- contenido -->
+    <body>
+        <h1>Carrera del ciclo 2023-2</h1>
+        <h2>Lista de Cursos:</h2>
+        <ul>
+            {% for curso in cursos %}
+                <li>{{ curso }}</li>
+            {% endfor %}
+        </ul>
+    </body>
     <footer>
-        UNTELS - LP3 - Marcani Diaz, Terry Anthony - 20/11/2023
+        UNTELS - LP3 - Marcani - Mondragon - Muñoz - 20/11/2023
     </footer>
 </body>
 </html>

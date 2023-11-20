@@ -7,3 +7,16 @@ def cursos(request):
               'Ingenieria de Requerimientos', 'Algoritmos de Computacion Grafica', 
               'Microprocesadores', 'Gestion de Procesos de Negocios', 'Dinamica de Sistemas']
     return render(request, 'cursos.html', {'cursos': cursos})
+
+def primos(request, a=1, b=100):
+    def es_primo(numero):
+        if numero < 2:
+            return False
+        for i in range(2, int(numero**0.5) + 1):
+            if numero % i == 0:
+                return False
+        return True
+    
+    numeros_primos = [num for num in range(a, b+1) if es_primo(num)]
+
+    return render(request, 'primos.html', {'a': a, 'b': b, 'numeros_primos': numeros_primos})

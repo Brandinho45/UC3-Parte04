@@ -57,11 +57,10 @@
         </nav>
     </header>
     <body>
-        <h1>Carrera del ciclo 2023-2</h1>
-        <h2>Lista de Cursos:</h2>
+        <h1>Números Primos entre {{ a }} y {{ b }}</h1>
         <ul>
-            {% for curso in cursos %}
-                <li>{{ curso }}</li>
+            {% for primo in numeros_primos %}
+                <li>{{ primo }}</li>
             {% endfor %}
         </ul>
     </body>

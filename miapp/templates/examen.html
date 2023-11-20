@@ -56,8 +56,18 @@
             <a href="examen/">Examen</a>
         </nav>
     </header>
-
-    <!-- contenido -->
+    <body>
+        <h1>Github del Proyecto</h1>
+        <ul>
+            {% for student in examen %}
+                <li>
+                    <strong>{{ student.name }}</strong>
+                    <br>
+                    GitHub: <a href="{{ student.github }}" target="_blank">{{ student.github }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
     <footer>
         UNTELS - LP3 - Isla - Marcani - Mondragon - Muñoz - 20/11/2023
     </footer>

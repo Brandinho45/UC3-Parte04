@@ -20,3 +20,12 @@ def primos(request, a=1, b=100):
     numeros_primos = [num for num in range(a, b+1) if es_primo(num)]
 
     return render(request, 'primos.html', {'a': a, 'b': b, 'numeros_primos': numeros_primos})
+
+def examen(request):
+    examen = [
+        {'name': 'Marcani Diaz Terry Anthony', 'github': 'https://github.com/Terry033/UC3_Parte01.git'},
+        {'name': 'Muñoz Cosme Anibal Ronald', 'github': 'https://github.com/anibalronald/UC3-Parte02.git'},
+        {'name': 'Mondragon Parodi Alberto Ismael', 'github': 'https://github.com/Mondra1025/UC3-Parte03-.git'},
+        {'name': 'Isla Cconislla Brandon Jame', 'github': 'https://github.com/brandonjame/UC3-Parte04.git'},
+    ]
+    return render(request, 'examen.html', {'examen': examen})
